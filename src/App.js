@@ -1,4 +1,4 @@
-import {AudioAnalyser} from "./AudioAnalyser";
+import AudioAnalyser from "./components/AudioAnalyser";
 import { useState } from "react";
 
 // custom styling using styled-components!
@@ -27,7 +27,6 @@ function App() {
   };
 
   return (
-    <main>
       <div className="controls">
         <button onClick={toggleMicrophone}>
           {audio ? "Stop microphone" : "Get microphone input"}
@@ -35,10 +34,6 @@ function App() {
         {audio ? <AudioAnalyser audio={audio} /> : ""}
       </div>
 
-      {/* <Header /> */}
-      {/* <Clock /> */}
-      {/* <Footer /> */}
-    </main>
   );
 }
 
