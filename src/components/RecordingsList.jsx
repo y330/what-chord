@@ -1,5 +1,5 @@
 import { Trash, ExclamationMark } from "tabler-icons-react";
-import useRecordingsList from "../hooks/use-recordings-list";
+import useRecordingsList from "../hooks/useRecordingList";
 
 export default function RecordingsList({ audio }) {
   const { recordings, deleteAudio } = useRecordingsList(audio);

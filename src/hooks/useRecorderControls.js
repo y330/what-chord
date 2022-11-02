@@ -10,7 +10,7 @@ const initialState = {
   audio: null,
 };
 
-export default function useRecorder() {
+export default function useRecorderCo() {
   const [recorderState, setRecorderState] = useState(initialState);
 
   useEffect(() => {

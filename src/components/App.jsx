@@ -1,6 +1,7 @@
-import RecorderControls from "./components/RecorderControls";
-import RecordingsList from "./components/RecordingsList";
-import useRecorder from "./hooks/useRecorder";
+import Guitar from "./Guitar";
+import RecorderControls from "./RecorderControls";
+import RecordingsList from "./RecordingsList";
+import useRecorder from "../hooks/useRecorderControls";
 
 export default function App() {
   const { recorderState, ...handlers } = useRecorder();
@@ -34,6 +35,9 @@ export default function App() {
       </style>
       <section className="voice-recorder">
         <h1 className="title">What Chord?</h1>
+        <div className="guitar">
+          <Guitar />
+        </div>
         <div className="recorder-container">
           <RecorderControls recorderState={recorderState} handlers={handlers} />
           <RecordingsList audio={audio} />
